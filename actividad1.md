@@ -19,7 +19,7 @@ Veiem que la prioritat general (PRI) és 20 i la prioritat d’usuari nice (NI) 
 
 
 ```
-elilegser@PC762:~$ renice 30 147415
-147415 (process ID) prioridad anterior 0, nueva prioridad 19
+elilegser@PC762:~$ renice 30 95824
+95824 (process ID) prioridad anterior 0, nueva prioridad 19
 
 ```
