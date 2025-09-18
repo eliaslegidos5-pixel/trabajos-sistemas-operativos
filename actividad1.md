@@ -13,3 +13,13 @@ Aquestes opcions ens donen un llarg llistat poc pràctic, però ens ajuden a loc
 F   UID     PID    PPID PRI  NI    VSZ   RSS WCHAN  STAT TTY        TIME COMMAND
 1 1219636248 95824 17012 20   0 1283583704 202780 futex_ Sl ?       0:06 /opt/google/chrome/chrome --type=rend
 ```
+
+Veiem que la prioritat general (PRI) és 20 i la prioritat d’usuari nice (NI) està a 0. Baixem ara al mínim la prioritat nice:
+
+
+
+```
+elilegser@PC762:~$ renice 30 147415
+147415 (process ID) prioridad anterior 0, nueva prioridad 19
+
+```
