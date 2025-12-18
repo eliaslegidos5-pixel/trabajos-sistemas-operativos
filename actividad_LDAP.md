@@ -1,44 +1,85 @@
-# Ejercicio información LDAP  
+# Ejercicio información LDAP
+
 **Elías Legidos – 2º ASIR**
 
 ---
 
 ## Planificación de la fusión de directorios LDAP
 
-Es el proceso de preparar y organizar la unión de dos o más directorios LDAP (por ejemplo, dos servidores con usuarios distintos) en uno solo.
+Es el proceso de preparar y organizar la unión de dos o más directorios LDAP (por ejemplo, dos servidores con usuarios distintos) en uno solo. Sirve para:
 
-### Sirve para:
-- Unificar usuarios y grupos de diferentes sistemas  
-- Evitar duplicados de cuentas  
-- Mantener permisos y datos correctos  
-- Reducir errores durante la migración  
+- Unificar usuarios y grupos de diferentes sistemas
+- Evitar duplicados de cuentas
+- Mantener permisos y datos correctos
+- Reducir errores durante la migración
 
-Esta es la parte más importante del proceso, ya que es la que evita la pérdida de datos.
+Esta es la parte más importante, ya que evita la pérdida de datos.
+
+Los atributos obligatorios son:
+
+- `cn`
+- `sn`
+- `objectClass`
 
 ---
 
 ## Creación de un archivo LDIF
 
-Un archivo **LDIF (LDAP Data Interchange Format)** es un archivo de texto que describe datos de un directorio LDAP.
+Un archivo **LDIF (LDAP Data Interchange Format)** es un archivo de texto que describe datos de un directorio LDAP. Sirve para:
 
-### Sirve para:
-- Añadir usuarios, grupos u otras entradas al LDAP  
-- Importar datos desde otro servidor  
-- Crear estructuras organizativas (ou)  
-- Automatizar la carga de información  
+- Añadir usuarios, grupos u otras entradas al LDAP
+- Importar datos desde otro servidor
+- Crear estructuras organizativas (`ou`)
+- Automatizar la carga de información
 
-Se usa normalmente con comandos como **`ldapadd`**, que sirve para añadir entradas, aunque también se pueden usar otros comandos para modificar o borrar dichas entradas.
+Se usa normalmente con comandos como `ldapadd`, que sirve para añadir entradas. También pueden usarse comandos para modificar o borrar estas entradas.
+
+El fichero con la información sería el siguiente:
+
+```ldif
+dn: cn=Elías Legidos Serván,ou=contactes,dc=empresa,dc=com
+objectClass: inetOrgPerson
+cn: Elías Legidos Serván
+givenName: Elías
+sn: Legidos Serván
+homePhone: 931234567
+mobile: 666789012
+telephoneNumber: 930987654
+o: Empresa S.L.
+postalAddress: Avenida Ausías March, 17
+postalCode: 46006
+l: Valencia
+mail: e.legidos@empresa.com
+```
 
 ---
 
 ## Archivo LDIF para modificar datos
 
-Es un archivo LDIF especial que no crea entradas nuevas, sino que modifica las que ya existen.
+Es un archivo LDIF especial que no crea entradas nuevas, sino que modifica las que ya existen. Sirve para:
 
-### Sirve para:
-- Cambiar correos electrónicos  
-- Actualizar contraseñas  
-- Añadir o eliminar atributos  
-- Corregir errores sin borrar usuarios  
+- Cambiar correos electrónicos
+- Actualizar contraseñas
+- Añadir o eliminar atributos
+- Corregir errores sin borrar usuarios
 
-Se aplica con el comando **`ldapmodify`**.
+Se aplica con el comando `ldapmodify`.
+
+El fichero para reemplazar la información que queramos (por ejemplo, la dirección de vivienda, código postal y ciudad) sería el siguiente:
+
+```ldif
+dn: cn=Elías Legidos Serván,ou=contactes,dc=empresa,dc=com
+changetype: modify
+
+delete: homePhone
+homePhone: 931234567
+-
+replace: postalAddress
+postalAddress: Carrera Malilla, 56
+-
+replace: postalCode
+postalCode: 46024
+-
+replace: l
+l: Mataró
+```
