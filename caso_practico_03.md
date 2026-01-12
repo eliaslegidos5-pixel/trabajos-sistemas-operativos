@@ -11,3 +11,7 @@ Para este caso práctico, simplemente creamos un contenedor a partir de la image
 ```
  docker run --rm -it -p 8080:8080 theasp/novnc 
 ```
+
+Abriendo un navegador a la siguiente URL http://localhost:8080/vnc.html se nos cargará un cliente NoVNC (Cliente VNC en HTML5 y Javascript). Simplemente, conectaremos con dicho cliente y en nuestro navegador veremos una interfaz gráfica dentro de nuestro contenedor. 
+
+Una vez hecho podremos ver que nos ha aparecido una interfaz gráfica .
