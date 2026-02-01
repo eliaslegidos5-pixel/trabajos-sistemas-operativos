@@ -97,7 +97,7 @@ docker compose up -d
 Se crea el proyecto Django dentro del contenedor:
 
 ```bash
-docker compose run web django-admin startproject ejemplodjango .
+docker compose run web django-admin startproject djangoelias .
 ```
 
 El proyecto queda almacenado en el directorio `./codigo`.
@@ -167,6 +167,4 @@ Si aparece la página de bienvenida de Django, la práctica se ha realizado corr
 
 ---
 
-## 12. Conclusión
 
-Se ha desplegado una aplicación Django conectada a una base de datos PostgreSQL utilizando Docker Compose, asegurando la persistencia tanto del código como de la base de datos mediante volúmenes.
