@@ -4,16 +4,6 @@
 
 ---
 
-## 1. Introducción
-
-En esta práctica se va a trabajar con **Whisper AI**, una herramienta desarrollada por OpenAI que permite convertir audio en texto de forma automática. Whisper destaca por su alta precisión y por poder ejecutarse de forma local mediante contenedores Docker.
-
-Además, se utilizará **Whisper Web**, que es una aplicación web que ofrece una interfaz gráfica sencilla para enviar audios y obtener su transcripción utilizando Whisper AI como motor principal.
-
-El objetivo de esta práctica es desplegar Whisper AI y Whisper Web usando **Docker Compose**, siguiendo un enfoque práctico y sencillo.
-
----
-
 ## 2. Requisitos previos
 
 Antes de comenzar con la práctica es necesario contar con los siguientes requisitos:
@@ -91,25 +81,4 @@ Desde esta interfaz web se pueden subir archivos de audio y obtener su transcrip
 
 ---
 
-## 6. Comprobación del funcionamiento
 
-Para comprobar que todo funciona correctamente:
-
-1. Acceder a la URL indicada.
-2. Subir un archivo de audio compatible.
-3. Esperar a que Whisper AI procese el audio.
-4. Verificar que el texto transcrito se muestra correctamente en pantalla.
-
----
-
-## 7. Conclusión
-
-Con esta práctica se ha aprendido a desplegar un servicio completo utilizando Docker Compose, integrando Whisper AI con una interfaz web funcional. Esta solución permite realizar transcripciones de audio a texto de forma local y eficiente, sin depender de servicios externos.
-
----
-
-## 8. Bibliografía
-
-- Docker Docs: https://docs.docker.com/
-- Docker Compose Docs: https://docs.docker.com/compose/
-- Repositorio Whisper Web: https://codeberg.org/pluja/web-whisper
