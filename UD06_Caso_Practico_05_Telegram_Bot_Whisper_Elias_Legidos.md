@@ -4,15 +4,7 @@
 
 ---
 
-## 1. Introducción
 
-En esta práctica se va a implementar un **bot de Telegram** capaz de transcribir mensajes de voz y audios a texto utilizando **Whisper AI**. Para mejorar el rendimiento, se emplea **Whisper CPP**, una implementación en C++ mucho más eficiente que la versión original.
-
-El bot permite recibir audios tanto en conversaciones privadas como en grupos de Telegram y devuelve automáticamente la transcripción del audio recibido.
-
-El objetivo principal de esta práctica es desplegar este bot mediante **Docker Compose**, configurándolo correctamente para su funcionamiento.
-
----
 
 ## 2. Requisitos previos
 
@@ -109,23 +101,7 @@ En el caso de los grupos, la transcripción será visible para todos los miembro
 
 ---
 
-## 7. Comprobación del funcionamiento
 
-Para verificar que el bot funciona correctamente:
-
-1. Enviar un audio corto al bot.
-2. Esperar unos segundos.
-3. Comprobar que se recibe la transcripción del audio en texto.
-
----
-
-## 8. Conclusión
-
-Con esta práctica se ha aprendido a crear y desplegar un bot de Telegram usando Docker, integrando Whisper AI para la transcripción de audios. Esta solución es muy útil para automatizar la conversión de mensajes de voz a texto de forma rápida y eficiente.
-
----
-
-## 9. Bibliografía
 
 - Docker Docs: https://docs.docker.com/
 - Docker Compose Docs: https://docs.docker.com/compose/
