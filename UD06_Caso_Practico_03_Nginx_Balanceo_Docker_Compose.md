@@ -18,12 +18,12 @@ La estructura de directorios utilizada es la siguiente:
 
 ```
 .
-├── apache
-│   ├── Dockerfile
-│   └── index.php
-├── nginxproxy
-│   └── nginx.conf
-└── docker-compose.yml
+- apache
+   - Dockerfile
+    - index.php
+   -nginxproxy
+    - nginx.conf
+   -docker-compose.yml
 ```
 
 ---
