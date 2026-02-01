@@ -102,8 +102,3 @@ En el caso de los grupos, la transcripción será visible para todos los miembro
 ---
 
 
-
-- Docker Docs: https://docs.docker.com/
-- Docker Compose Docs: https://docs.docker.com/compose/
-- Repositorio Whisper CPP: https://github.com/ggerganov/whisper.cpp
-- Bot de Telegram Whisper: https://github.com/sergarb1/telegram-bot-whisper-cpp
