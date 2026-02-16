@@ -4,7 +4,7 @@
 
 Lo primero de todo descomprimimos en una carpeta el archivo `.zip`.
 
-------------------------------------------------------------------------
+
 
 Después de probar varias veces no he podido acceder ya que la práctica
 es muy antigua y no está actualizada, pero tendríamos que hacer lo
@@ -35,9 +35,7 @@ docker compose --profile auto-cpu up --build
 
 6.  Entrar en el navegador y acceder a:
 
-```{=html}
-<!-- -->
-```
+
     127.0.0.1:7860
 
 7.  Escribir una descripción (prompt) y esperar a que la IA genere una
