@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  ap01:
+    build: ./apache01
+    container_name: ap01
+    restart: always
+    networks:
+      - balanceo
+
+  ap02:
+    build: ./apache02
+    container_name: ap02
+    restart: always
+    networks:
+      - balanceo
+
+  haproxy:
+    build: ./haproxy
+    container_name: ha01
+    restart: always
+    ports:
+      - "8080:80"
+    depends_on:
+      - ap01
+      - ap02
+    networks:
+      - balanceo
+
+networks:
+  balanceo:

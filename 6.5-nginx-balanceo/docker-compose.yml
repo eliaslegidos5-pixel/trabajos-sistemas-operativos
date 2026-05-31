@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  apache:
+    build: ./apache
+    restart: always
+    ports:
+      - "80"
+
+  nginxproxy:
+    image: nginx:latest
+    volumes:
+      - ./nginxproxy/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - apache
+    ports:
+      - "4000:4000"
