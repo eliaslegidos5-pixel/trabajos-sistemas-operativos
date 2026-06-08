@@ -24,5 +24,6 @@ De momento, la máquina ya arranca y funciona perfectamente en el nodo de Proxmo
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8bd77714-db7a-4db9-b90e-dad26988c152" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5d3fc691-7663-4260-86e1-a37e645540e7" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6f1442cd-22ae-4ec8-8afa-1bb4eada30b2" />
+
 
