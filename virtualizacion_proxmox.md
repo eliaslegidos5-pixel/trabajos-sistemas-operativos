@@ -18,3 +18,10 @@ En el lector de CD virtual de la máquina dejamos puesta la ISO de Kali que subi
 
 5. Detalles finales
 De momento, la máquina ya arranca y funciona perfectamente en el nodo de Proxmox. Como detalle pendiente, en las opciones de la máquina dejamos desactivado el QEMU Guest Agent, por lo que Proxmox no muestra directamente la IP interna de la máquina en el resumen, pero para usarla con la consola funciona de diez.
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/593576c1-da38-4c48-b352-cd1bb0f49987" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8bd77714-db7a-4db9-b90e-dad26988c152" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ad94400d-8235-4ae7-9215-749a9f7e89dc" />
